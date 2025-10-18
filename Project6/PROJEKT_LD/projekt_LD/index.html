@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    </link>
+    <title>Earthquakes</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Visualization of earthquakes in 2023</h1>
+    </div>
+    <div>
+        <h1>  </h1>
+    </div>
+    <div id="controls">
+        <label for="month-select" class="custom-label">Select Month:</label>
+        <div class="custom-select">
+            <select id="month-select">
+                <option value="all">All</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="map" class="map">
+        <div id="details_map" class="details_map">
+            <div class="details_map-place">
+                Place: <span id="place"></span>
+            </div>
+            <div class="details_map-date">
+                Date: <span id="date"></span>
+            </div>
+            <div class="details_map-magnitude">
+                Magnitude: <span id="magnitude"></span>
+            </div>
+            <div class="details_map-depth">
+                Depth: <span id="depth"></span> km
+            </div>
+        </div>
+    </div>
+
+    <div id="line-chart" class="line-chart">
+        <div id="details_line" class="details_line">
+            <div class="details_line-date">
+                Date: <span id="date"></span>
+            </div>
+            <div class="details_line-count">
+                Earthquake count: <span id="count"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="scatterplot" class="scatterplot"></div>
+
+    <div id="histogram-mag" class="histogram-mag">
+        <div id="details_mag" class="details_mag">
+            <div class="details_mag-range">
+                Magnitude Range: <span id="range"></span>
+            </div>
+            <div class="details_mag-count">
+                Earthquakes in range: <span id="count"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="histogram-depth" class="histogram-depth">
+        <div id="details_depth" class="details_depth">
+            <div class="details_depth-range">
+                Depth Range: <span id="range"></span>
+            </div>
+            <div class="details_depth-count">
+                Earthquakes in range: <span id="count"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="d3.js"></script>
+    <script src="map.js"></script>
+
+</body>
+
+</html>
